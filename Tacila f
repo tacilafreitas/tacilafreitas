@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus objetivos do ano</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+            /* Fundo degradê animado */
+            background: linear-gradient(-45deg, #89f7fe, #66a6ff, #f5a3ff, #ffcd70);
+            background-size: 400% 400%;
+            animation: gradient 10s ease infinite;
+        }
+
+        @keyframes gradient {
+            0% {background-position: 0% 50%;}
+            50% {background-position: 100% 50%;}
+            100% {background-position: 0% 50%;}
+        }
+
+        .conteudo-principal {
+            text-align: center;
+            padding: 50px;
+        }
+
+        .titulo-principal {
+            font-size: 42px; /* Aumentei a letra */
+            color: #ffffff;
+        }
+
+        .botoes {
+            margin-top: 30px;
+        }
+
+        .botao {
+            display: block;
+            margin: 15px auto;
+            padding: 20px 40px;
+            font-size: 20px; /* Aumentei a letra */
+            background-color: #ffffff;
+            color: #333;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .botao:hover {
+            background-color: #ddd;
+            transform: scale(1.05);
+        }
+
+        .contador {
+            margin-top: 8px;
+            font-size: 18px; /* Aumentei a letra */
+            color: #ffffff;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="conteudo-principal">
+        <h2 class="titulo-principal">Meus Objetivos do ano<span>_</span></h2>
+        <div class="botoes">
+            <div class="objetivo">
+                <button class="botao">Melhorar minhas notas</button>
+                <div class="contador" id="contador1"></div>
+            </div>
+            <div class="objetivo">
+                <button class="botao">Entregar todos os trabalhos no prazo</button>
+                <div class="contador" id="contador2"></div>
+            </div>
+            <div class="objetivo">
+                <button class="botao">Melhorar na redação</button>
+                <div class="contador" id="contador3"></div>
+            </div>
+            <div class="objetivo">
+                <button class="botao">Ler mais livros para a escola</button>
+                <div class="contador" id="contador4"></div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function criarContagem(id, dataFinal) {
+            const contador = document.getElementById(id);
+            function atualizarContagem() {
+                const agora = new Date();
+                const final = new Date(dataFinal);
+                const diferenca = final - agora;
+
+                if (diferenca > 0) {
+                    const horas = Math.floor(diferenca / (1000 * 60 * 60));
+                    const minutos = Math.floor((diferenca % (1000 * 60 * 60)) / (1000 * 60));
+                    const segundos = Math.floor((diferenca % (1000 * 60)) / 1000);
+
+                    contador.textContent = `Faltam ${horas}h ${minutos}m ${segundos}s`;
+                } else {
+                    contador.textContent = "Prazo finalizado!";
+                }
+            }
+
+            atualizarContagem();
+            setInterval(atualizarContagem, 1000); // Atualiza a cada segundo
+        }
+
+        criarContagem("contador1", "2025-12-10T23:59:59");
+        criarContagem("contador2", "2025-11-30T23:59:59");
+        criarContagem("contador3", "2025-10-20T23:59:59");
+        criarContagem("contador4", "2025-12-01T23:59:59");
+    </script>
+</body>
+</html><!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus objetivos do ano</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+            /* Fundo degradê animado */
+            background: linear-gradient(-45deg, #89f7fe, #66a6ff, #f5a3ff, #ffcd70);
+            background-size: 400% 400%;
+            animation: gradient 10s ease infinite;
+        }
+
+        @keyframes gradient {
+            0% {background-position: 0% 50%;}
+            50% {background-position: 100% 50%;}
+            100% {background-position: 0% 50%;}
+        }
+
+        .conteudo-principal {
+            text-align: center;
+            padding: 50px;
+        }
+
+        .titulo-principal {
+            font-size: 42px; /* Aumentei a letra */
+            color: #ffffff;
+        }
+
+        .botoes {
+            margin-top: 30px;
+        }
+
+        .botao {
+            display: block;
+            margin: 15px auto;
+            padding: 20px 40px;
+            font-size: 20px; /* Aumentei a letra */
+            background-color: #ffffff;
+            color: #333;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .botao:hover {
+            background-color: #ddd;
+            transform: scale(1.05);
+        }
+
+        .contador {
+            margin-top: 8px;
+            font-size: 18px; /* Aumentei a letra */
+            color: #ffffff;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="conteudo-principal">
+        <h2 class="titulo-principal">Meus Objetivos do ano<span>_</span></h2>
+        <div class="botoes">
+            <div class="objetivo">
+                <button class="botao">Melhorar minhas notas</button>
+                <div class="contador" id="contador1"></div>
+            </div>
+            <div class="objetivo">
+                <button class="botao">Entregar todos os trabalhos no prazo</button>
+                <div class="contador" id="contador2"></div>
+            </div>
+            <div class="objetivo">
+                <button class="botao">Melhorar na redação</button>
+                <div class="contador" id="contador3"></div>
+            </div>
+            <div class="objetivo">
+                <button class="botao">Ler mais livros para a escola</button>
+                <div class="contador" id="contador4"></div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function criarContagem(id, dataFinal) {
+            const contador = document.getElementById(id);
+            function atualizarContagem() {
+                const agora = new Date();
+                const final = new Date(dataFinal);
+                const diferenca = final - agora;
+
+                if (diferenca > 0) {
+                    const horas = Math.floor(diferenca / (1000 * 60 * 60));
+                    const minutos = Math.floor((diferenca % (1000 * 60 * 60)) / (1000 * 60));
+                    const segundos = Math.floor((diferenca % (1000 * 60)) / 1000);
+
+                    contador.textContent = `Faltam ${horas}h ${minutos}m ${segundos}s`;
+                } else {
+                    contador.textContent = "Prazo finalizado!";
+                }
+            }
+
+            atualizarContagem();
+            setInterval(atualizarContagem, 1000); // Atualiza a cada segundo
+        }
+
+        criarContagem("contador1", "2025-12-10T23:59:59");
+        criarContagem("contador2", "2025-11-30T23:59:59");
+        criarContagem("contador3", "2025-10-20T23:59:59");
+        criarContagem("contador4", "2025-12-01T23:59:59");
+    </script>
+</body>
+</html>
