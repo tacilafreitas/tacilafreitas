@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projeto Sustentabilidade Ambiental</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #ffffff;
+      color: #000000;
+    }
+
+    header {
+      background-color: #006400;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    main {
+      padding: 30px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #006400;
+    }
+
+    p {
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    iframe {
+      display: block;
+      margin: 30px auto;
+      max-width: 100%;
+      border: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #000000;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Construindo um Futuro Sustentável</h1>
+  </header>
+
+  <main>
+    <h2>O que é Sustentabilidade Ambiental?</h2>
+    <p>
+      Sustentabilidade ambiental é a prática de viver em harmonia com o meio ambiente, garantindo que os recursos naturais sejam utilizados de forma consciente e renovável. Isso significa preservar o que temos hoje para que as futuras gerações também possam usufruir de um planeta saudável e equilibrado.
+    </p>
+
+    <p>
+      A sustentabilidade envolve diversas ações, como o uso responsável da água, a reciclagem de materiais, a redução do consumo de energia, o incentivo ao transporte coletivo ou à mobilidade ativa, como caminhar e andar de bicicleta. Também é essencial cuidar das florestas, dos oceanos e da biodiversidade.
+    </p>
+
+    <p>
+      Cada pequena atitude faz a diferença. Separar o lixo corretamente, evitar o desperdício de alimentos, reutilizar embalagens e optar por produtos sustentáveis são passos importantes que todos podemos adotar no dia a dia.
+    </p>
+
+    <p>
+      Além disso, empresas e governos têm um papel fundamental na criação de políticas e tecnologias que protejam o meio ambiente e promovam um desenvolvimento sustentável.
+    </p>
+
+    <h2>Assista ao vídeo e aprenda mais</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/fAYkHQS4WnM" 
+      title="Sustentabilidade Ambiental Explicada" allowfullscreen>
+    </iframe>
+  </main>
+
+  <footer>
+    Projeto Escolar de Sustentabilidade © 2025
+  </footer>
+</body>
+</html><!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projeto Sustentabilidade Ambiental</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #ffffff;
+      color: #000000;
+    }
+
+    header {
+      background-color: #006400;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    main {
+      padding: 30px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #006400;
+    }
+
+    p {
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    iframe {
+      display: block;
+      margin: 30px auto;
+      max-width: 100%;
+      border: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #000000;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Construindo um Futuro Sustentável</h1>
+  </header>
+
+  <main>
+    <h2>O que é Sustentabilidade Ambiental?</h2>
+    <p>
+      Sustentabilidade ambiental é a prática de viver em harmonia com o meio ambiente, garantindo que os recursos naturais sejam utilizados de forma consciente e renovável. Isso significa preservar o que temos hoje para que as futuras gerações também possam usufruir de um planeta saudável e equilibrado.
+    </p>
+
+    <p>
+      A sustentabilidade envolve diversas ações, como o uso responsável da água, a reciclagem de materiais, a redução do consumo de energia, o incentivo ao transporte coletivo ou à mobilidade ativa, como caminhar e andar de bicicleta. Também é essencial cuidar das florestas, dos oceanos e da biodiversidade.
+    </p>
+
+    <p>
+      Cada pequena atitude faz a diferença. Separar o lixo corretamente, evitar o desperdício de alimentos, reutilizar embalagens e optar por produtos sustentáveis são passos importantes que todos podemos adotar no dia a dia.
+    </p>
+
+    <p>
+      Além disso, empresas e governos têm um papel fundamental na criação de políticas e tecnologias que protejam o meio ambiente e promovam um desenvolvimento sustentável.
+    </p>
+
+    <h2>Assista ao vídeo e aprenda mais</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/fAYkHQS4WnM" 
+      title="Sustentabilidade Ambiental Explicada" allowfullscreen>
+    </iframe>
+  </main>
+
+  <footer>
+    Projeto Escolar de Sustentabilidade © 2025
+  </footer>
+</body>
+</html>
