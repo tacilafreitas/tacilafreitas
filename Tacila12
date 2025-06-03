@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gerador de Senhas</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #0d1b2a;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      text-align: center;
+      background-color: #1b263b;
+      padding: 40px;
+      border-radius: 10px;
+      width: 320px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .senha-display {
+      margin: 20px 0;
+      padding: 10px;
+      background-color: #415a77;
+      border-radius: 5px;
+      font-size: 1.2rem;
+      word-wrap: break-word;
+    }
+
+    .configuracoes {
+      margin-bottom: 20px;
+      text-align: left;
+    }
+
+    .configuracoes label {
+      display: block;
+      margin-top: 10px;
+      font-size: 0.95rem;
+    }
+
+    input[type="range"] {
+      width: 100%;
+    }
+
+    button {
+      background-color: #778da9;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 5px;
+    }
+
+    button:hover {
+      background-color: #a9bcd0;
+    }
+
+    .forca {
+      margin-top: 15px;
+      font-size: 0.9rem;
+      color: #f8f9fa;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Gerador de Senhas</h1>
+
+    <div class="senha-display" id="senhaDisplay">Clique para gerar uma senha</div>
+
+    <div class="configuracoes">
+      <label for="tamanho">Tamanho: <span id="tamanhoValor">12</span></label>
+      <input type="range" id="tamanho" min="4" max="32" value="12" />
+
+      <label><input type="checkbox" id="maiusculas" checked /> Incluir letras maiúsculas</label>
+      <label><input type="checkbox" id="numeros" checked /> Incluir números</label>
+      <label><input type="checkbox" id="simbolos" checked /> Incluir símbolos</label>
+    </div>
+
+    <button id="gerarBtn">Gerar Senha</button>
+    <button id="copiarBtn">Copiar</button>
+
+    <div class="forca" id="forcaSenha"></div>
+  </div>
+
+  <script>
+    const senhaDisplay = document.getElementById('senhaDisplay');
+    const gerarBtn = document.getElementById('gerarBtn');
+    const copiarBtn = document.getElementById('copiarBtn');
+    const tamanhoInput = document.getElementById('tamanho');
+    const tamanhoValor = document.getElementById('tamanhoValor');
+    const forcaSenha = document.getElementById('forcaSenha');
+    const maiusculas = document.getElementById('maiusculas');
+    const numeros = document.getElementById('numeros');
+    const simbolos = document.getElementById('simbolos');
+
+    tamanhoInput.addEventListener('input', () => {
+      tamanhoValor.textContent = tamanhoInput.value;
+    });
+
+    gerarBtn.addEventListener('click', () => {
+      const senha = gerarSenha(tamanhoInput.value);
+      senhaDisplay.textContent = senha;
+      forcaSenha.textContent = avaliarForca(senha);
+    });
+
+    copiarBtn.addEventListener('click', () => {
+      const texto = senhaDisplay.textContent;
+      navigator.clipboard.writeText(texto)
+        .then(() => alert('Senha copiada!'))
+        .catch(() => alert('Erro ao copiar senha.'));
+    });
+
+    function gerarSenha(tamanho) {
+      let caracteres = 'abcdefghijklmnopqrstuvwxyz';
+      if (maiusculas.checked) caracteres += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+      if (numeros.checked) caracteres += '0123456789';
+      if (simbolos.checked) caracteres += '!@#$%&*';
+
+      if (caracteres.length === 0) return 'Selecione pelo menos uma opção!';
+
+      let senha = '';
+      for (let i = 0; i < tamanho; i++) {
+        const index = Math.floor(Math.random() * caracteres.length);
+        senha += caracteres.charAt(index);
+      }
+      return senha;
+    }
+
+    function avaliarForca(senha) {
+      const comprimento = senha.length;
+      const temMaiuscula = /[A-Z]/.test(senha);
+      const temNumero = /[0-9]/.test(senha);
+      const temSimbolo = /[^A-Za-z0-9]/.test(senha);
+      let score = 0;
+
+      if (comprimento >= 8) score++;
+      if (temMaiuscula) score++;
+      if (temNumero) score++;
+      if (temSimbolo) score++;
+
+      switch (score) {
+        case 0: return 'Força: Muito fraca';
+        case 1: return 'Força: Fraca';
+        case 2: return 'Força: Média';
+        case 3: return 'Força: Forte';
+        case 4: return 'Força: Muito forte';
+      }
+    }
+  </script>
+</body>
+</html>
